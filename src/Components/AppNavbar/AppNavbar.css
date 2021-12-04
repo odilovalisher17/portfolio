@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* a, ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-logo{
+    font-family: 'Gwendolyn', cursive;
+    font-size: 70px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+
+.nav ul{
+    display: flex;
+}
+
+.nav ul li a{
+    font-size: 25px;
+    color: #fff;
+    padding: 0 19px;
+}
+
+.nav ul li{
+    padding: 6px 0;
+}
+
+.nav-toggle{
+    display: none !important;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  right: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-toggle-t .nav-toggle1{
+    /* position: absolute;
+    left: 0;
+    top: 11px; */
+    transform: rotate(45deg) !important;
+    transition: all 0.1s ease;
+}
+.nav-toggle1{
+    position: absolute;
+    transform-origin: 0% 0%;
+    transform: rotate(0);
+    transition: all 0.1s ease;
+    margin-bottom: 5px;
+}
+.nav-toggle-t .nav-toggle2{
+    width: 0%;
+    transition: all .1s ease;
+}
+.nav-toggle2{
+    position: absolute;
+    top: 42%;
+    overflow-x: hidden;
+    width: 100%;
+}
+.nav-toggle-t .nav-toggle3{
+    /* position: absolute;
+    left: 0;
+    top: 11px; */
+    transform: rotate(-45deg) ;
+    transition: all 0.1s ease;
+}
+.nav-toggle3{
+    position: absolute;
+    bottom: 0;
+    transform-origin: 0% 100%;
+    transform: rotate(0);
+    transition: all 0.1s ease;
+    margin-top: 5px;
+}
+
+.nav-toggle div{
+    display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+    background: white;
+}
+
+
+@media screen and (max-width:768px) {
+    .navbar{
+        padding: 0 2rem;
+    }
+    .nav-logo{
+        font-size: 45px;
+    }
+    .nav-toggle{
+        display: block !important;
+    }
+
+    .nav-nav{
+        flex-direction: column;
+        position: absolute;
+        top: 54px;
+        right: 30%;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        z-index: 100;
+        overflow-y: hidden;
+        height: 0 ;
+        transition: all .3s;
+        background: rgba(94, 14, 241, 0.9);
+    }
+    .show{
+        height: 180px !important;
+    }
+}
+
