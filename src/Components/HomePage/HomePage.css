@@ -39,7 +39,9 @@
 
 .left-side div{
     overflow-y: hidden;
-    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .left-side p{
