@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage p{
+    font-size: 45px
+}
+
+.h-btn{
+    padding: 15px 20px;
+    background: transparent;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    font-size: 19px;
+    margin: 0 15px;
+}
+.h-btn:active{
+    transform: scale(1.01);
+}
+.h-btn:hover{
+    background: yellowgreen;
+}
+
+.left-side{
+    height: 600px;
+    width: 600px;
+    position: relative;
+    padding-right: 2rem;
+}
+
+.left-side div{
+    overflow-y: hidden;
+    padding: 0 4rem;
+}
+
+.left-side p{
+    position: absolute;
+    top: 200px;
+    color: #000;
+    z-index: 15 !important;
+}
+
+.left-side-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.left-side-bottom{
+    position: relative;
+    bottom: 50px;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .left-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        height: 400px;
+    }
+    .left-side div{
+        padding: 0 !important;
+    }
+    .left-side-img{
+        width: 350px !important;
+        height: 300px !important;
+    }
+    .left-side p{
+        top: 100px !important;
+        position: absolute;
+        left: 8%;
+        font-size: 27px;
+        width: 280px;
+    }
+}

@@ -1,10 +1,77 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {NavLink} from 'react-router-dom'
+import './HomePage.css'
+import photo1 from './photo5.png'
+
+const words = ["Hello, I am Alisher", "I am Front End Developer", "Welcome to my Personal Website", ""];
+
 
 const Homepage = () => {
+
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [blink, setBlink] = useState(true);
+  const [reverse, setReverse] = useState(false);
+
+  // typeWriter
+  useEffect(() => {
+    if (index === words.length-1 && subIndex === 0) {
+      setIndex(0)
+      setReverse(false)
+      console.log("hello")
+      return;
+    };
+
+    if ( subIndex === words[index].length + 1 && !reverse ) {
+      setReverse(true);
+      return;
+    }
+
+    if (subIndex === 0 && reverse && index !== words.length-1) {
+      setReverse(false);
+      setIndex((prev) => prev + 1);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
+    }, Math.max(reverse ? 75 : subIndex === words[index].length ? 1000 :
+                150, parseInt(Math.random() * 350)));
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, reverse]);
+
+  // blinker
+  useEffect(() => {
+    const timeout2 = setTimeout(() => {
+      setBlink((prev) => !prev);
+    }, 500);
+    return () => clearTimeout(timeout2);
+  }, [blink]);
+
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem doloremque possimus architecto cumque neque perspiciatis vero soluta! Corporis quam repudiandae temporibus! Aliquam similique illo eum quas commodi consequatur. Unde, sunt sint! Fuga ipsam dolores totam eos soluta provident tempore, eum vitae itaque reiciendis commodi obcaecati dolor cupiditate mollitia distinctio! Accusamus enim nesciunt aperiam adipisci quasi assumenda maxime deleniti quia eius. Necessitatibus temporibus hic dolores debitis voluptatum enim, aspernatur rerum voluptates, tempora totam sapiente ex quas repellendus eveniet laborum dicta! Deleniti itaque minus quia hic velit ipsa dolore in explicabo doloribus accusamus officiis sapiente, soluta, porro magni provident aspernatur. Vero incidunt minima sunt in corrupti harum sapiente officiis? Similique enim possimus facere blanditiis asperiores laudantium iure ea officia. Excepturi, assumenda cum qui impedit magni modi corrupti amet necessitatibus aspernatur laborum voluptatum quibusdam sed ullam recusandae eveniet repellat velit delectus ratione consequuntur. Commodi magnam sapiente qui asperiores vel expedita quas ab explicabo quaerat iure consectetur neque veritatis possimus impedit doloribus, praesentium deleniti ipsam atque maiores quibusdam corrupti suscipit ipsa aspernatur? Cumque sunt ipsam cum quaerat facilis optio quis, repellendus delectus fugit iste commodi explicabo, asperiores reiciendis earum aperiam modi impedit neque aliquam doloribus, libero praesentium qui nesciunt rem maxime! Animi sunt ipsam ducimus commodi voluptatum deserunt quia delectus, placeat velit ullam nemo quasi ex earum! Fugiat maxime, harum quas enim quasi assumenda reiciendis. Cumque aliquid corrupti eos? Ad labore temporibus nihil assumenda expedita voluptatum accusamus atque porro sunt praesentium. Alias odio unde ipsam delectus illum iure dolor magni illo, obcaecati amet autem eius totam perspiciatis ex! Rerum delectus pariatur, dolorum blanditiis sint corrupti voluptatibus maxime iusto accusantium optio, ipsum ipsam a. Dolorum autem voluptatem et commodi esse corporis corrupti rem expedita alias dolor optio odio quas rerum tenetur, similique veniam ipsum totam aperiam facere assumenda atque? Aliquam, voluptates commodi ipsam sapiente voluptatum eius ratione neque similique cumque vero ex error officia eveniet omnis ipsa ab, saepe iusto nobis, porro quisquam labore deleniti quasi sit. Maiores quod dicta accusamus facere, laborum officia quam aut optio pariatur aliquid sed similique odit quaerat quisquam earum sit recusandae nihil inventore autem, animi, id assumenda quidem? Aut, quod? Voluptas, sunt in, itaque quo illum maxime laboriosam beatae nisi repudiandae laborum porro natus vitae maiores at nam soluta cumque fuga doloremque cum quas exercitationem. Tenetur quod sed, culpa atque minima nostrum dignissimos sit voluptate temporibus nesciunt ut ad omnis incidunt deserunt porro asperiores ipsa dolore accusantium perspiciatis ducimus, nam doloribus quam expedita. Veritatis excepturi eaque, est similique optio non. Nulla dolore a reiciendis pariatur nisi! Sint qui quo sed esse dicta odit aliquid laborum dolorum molestiae at, quidem exercitationem iusto nostrum? Nam fugiat ipsa tempora vel possimus culpa dolorem asperiores veniam libero aliquam, corrupti optio earum blanditiis incidunt porro dolores eligendi veritatis est sapiente odit velit, tenetur consequatur? Voluptatibus unde illo, ipsum distinctio dolore voluptatum magni beatae cupiditate commodi nemo tempore ab amet suscipit. Eaque odit sed, illo consectetur nam molestias incidunt totam accusamus nisi repellendus ea minima ipsum, error asperiores non praesentium dolorem sapiente? Ipsam id eum distinctio, tenetur esse enim. Eius tempore soluta similique quibusdam quos unde praesentium, et molestiae, consequatur incidunt voluptas explicabo aspernatur, nostrum repellat fugiat nulla commodi hic. Repellendus impedit harum beatae, eius voluptates dignissimos aut similique minus maxime sapiente accusantium incidunt corrupti magni ullam libero nisi totam culpa cumque ea soluta. Accusantium consequuntur recusandae, temporibus magni quisquam porro voluptates voluptate magnam laboriosam ex ad non quod repellendus, neque animi error sunt iure natus quasi inventore sapiente qui hic adipisci. Asperiores, veritatis quidem consequatur assumenda mollitia fuga cum placeat magnam voluptate totam non doloribus, ea veniam ratione animi, quod est temporibus dicta dignissimos ipsam debitis eligendi itaque. Libero architecto illum consequuntur, qui voluptas quasi labore beatae voluptatem ad iure, sint assumenda nobis non a? Rem eum dolor voluptatibus provident illo ipsum voluptatum molestiae, iusto repudiandae suscipit porro ratione sequi distinctio voluptate illum quam laborum, magnam beatae ipsa quasi unde! Voluptas blanditiis, architecto ad facilis laboriosam, consequatur quae dolore iure modi non est quibusdam! Laboriosam deleniti fugit magni quisquam id optio, molestias adipisci illum dicta quas perspiciatis sapiente soluta assumenda voluptatibus animi delectus inventore maxime pariatur blanditiis dolores vel excepturi esse repellendus enim. Accusamus odio doloremque nulla repellendus, eveniet magni, expedita magnam, quidem quaerat at vero porro placeat numquam velit? Dolorum eligendi qui, sapiente unde corporis in ipsam, explicabo repellat ratione adipisci ut. Id ipsa reiciendis, ex doloribus, impedit porro sit ratione dolore enim repudiandae eveniet quisquam saepe alias molestiae voluptas asperiores nihil eligendi minus rem facilis provident suscipit, hic maxime! Explicabo pariatur assumenda dolore tempora? Rem, fugit. Omnis eius sunt maiores quisquam, possimus, rerum iure mollitia incidunt aliquam perferendis odit fugit quibusdam tenetur voluptatibus repudiandae aliquid velit est ea commodi deleniti animi eum laudantium minima. Modi iste cupiditate esse voluptates vero quas autem minima nihil, sint est? Voluptatibus accusamus dolores numquam sint illum! Cum voluptatum ab tempore cumque commodi est, repudiandae modi, quaerat debitis ex perferendis expedita, a delectus officiis perspiciatis accusamus tempora illo recusandae? Eum nemo doloribus ullam neque nisi deserunt! Laborum velit molestiae voluptas, eveniet perferendis atque voluptates quam repellendus animi alias distinctio, qui magnam numquam aliquid obcaecati dolorum eius nisi quo repellat esse quidem nam totam fugit et! Fugiat asperiores optio ex commodi libero, qui explicabo. Iste, fuga! Vero sint eum fuga atque, assumenda optio in dicta voluptates impedit ad rem illo corporis veniam illum consequuntur ratione enim laborum doloremque! Consectetur autem a, sint quasi magnam recusandae libero dolorum pariatur facere vero assumenda perspiciatis fuga molestias eum voluptatum! Id ducimus perspiciatis eaque. Exercitationem laborum quo, qui culpa voluptates ullam corrupti sunt doloribus omnis optio suscipit sint ea facilis labore rem sit recusandae magni facere. Consequatur unde quaerat omnis? Fuga, doloremque non a iusto quos dignissimos quod possimus similique minus aut dolores aliquam temporibus corrupti assumenda consequuntur quidem, ut omnis excepturi placeat mollitia, exercitationem eveniet perferendis? Delectus, eum ad. Reiciendis reprehenderit dolorem dolorum. Mollitia quae facere odio similique, excepturi velit ducimus unde modi cupiditate, quaerat nihil distinctio? Iste consequuntur omnis quaerat. Maxime consequatur ullam eos quis quae et perferendis fuga quaerat.
-    </div>
+    <>
+      <div className='homepage'>
+        <div className='left-side'>
+          <div>
+            <img className='left-side-img' src={photo1} alt="" />
+            <p>
+              {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
+            </p>
+          </div>
+        </div>
+
+        <div className='left-side-bottom'>
+          <NavLink to='/portfolio'>
+            <button className='h-btn'>Portfolio</button>  
+          </NavLink>
+          
+          <NavLink to='/about'>
+            <button className='h-btn'>Resume</button>
+          </NavLink>
+        </div>
+      </div>
+    </>
   );
 }
 
