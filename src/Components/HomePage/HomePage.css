@@ -81,6 +81,7 @@
     }
     .left-side div{
         padding: 0 !important;
+        text-align: center;
     }
     .left-side-img{
         width: 350px !important;
