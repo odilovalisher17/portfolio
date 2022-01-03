@@ -1,7 +1,4 @@
-*{
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
+
 
 .homepage{
     display: flex;
@@ -27,7 +24,7 @@
     transform: scale(1.01);
 }
 .h-btn:hover{
-    background: yellowgreen;
+    background: aqua;
 }
 
 .left-side{
@@ -40,8 +37,13 @@
 .left-side div{
     overflow-y: hidden;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.left-side div p{
+    text-align: center;
+    width: 500px;
 }
 
 .left-side p{
@@ -92,6 +94,6 @@
         position: absolute;
         left: 8%;
         font-size: 27px;
-        width: 280px;
+        width: 280px !important;
     }
 }

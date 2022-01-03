@@ -1,0 +1,12 @@
+.about{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+    
+.about-left img{
+    height: 40vh;
+}
+
+
+
