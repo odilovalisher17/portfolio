@@ -18,6 +18,8 @@ const About = () => {
                 <p>
                     I am 20 y.o Front-End developer located in Tashkent Uzbekistan. I am a student of Tashkent State Technical University. I know technologies HTML, CSS, Bootstrap, JasaScript(ES6), ReactJS, Redux and Rest API. 
                 </p>
+
+                <button className='h-btn'>Download Resume</button>
             </div>
         </div>
     )
