@@ -27,7 +27,8 @@
         
         box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
         transition: 0.4s ease-in-out transform;
-}:hover {
+}
+.about-right:hover {
     transform: translate3d(0px, 0px, -250px);
 }
 
@@ -40,6 +41,21 @@
     font-size: 30px;
 }
 
+.about-icons{
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.about-icons i{
+    font-size: 45px;
+    padding: 0 2rem;
+    color: ;
+}
+
+.a-btn{
+    
+}
+
 @media screen and (max-width:768px) {
     .about{
         flex-direction: column;
@@ -47,8 +63,11 @@
         padding: 0 0 !important;
     }
     .about-right{
-        width: 90% !important;
+        width: 94% !important;
         padding: 2rem 2rem;
-        font-size: 16px;
+        margin: auto;
+    }
+    .about-right p{
+        font-size: 18px;
     }
 }
