@@ -1,7 +1,6 @@
 import React from 'react'
 import './About.css'
 import foto1 from './programmer.png'
-import f2 from './f3.png'
 
 const About = () => {
     return (
@@ -9,6 +8,27 @@ const About = () => {
             <div className='about-left'>
                 <img src={foto1} alt="" />
                 <h3>My Experience</h3>
+
+                <div className="chart">
+                    <div class="bar bar-75 white">
+                        <div class="face top">
+                            <div style={{position:"absolute", left:"35%", top:"15%"}}>HTML</div>
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face side-0">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face floor">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face side-a"></div>
+                        <div class="face side-b"></div>
+                        <div class="face side-1">
+                            <div style={{position:"absolute", left:"35%", top:"15%", transform:"rotate(180deg)"}}>HTML</div>
+                            <div class="growing-bar"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div className='about-right'>
