@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c438f4ed.chunk.css",
+    "main.js": "/static/js/main.4607152f.chunk.js",
+    "main.js.map": "/static/js/main.4607152f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.096c22aa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.096c22aa.js.map",
+    "static/css/2.53598cca.chunk.css": "/static/css/2.53598cca.chunk.css",
+    "static/js/2.b8620a07.chunk.js": "/static/js/2.b8620a07.chunk.js",
+    "static/js/2.b8620a07.chunk.js.map": "/static/js/2.b8620a07.chunk.js.map",
+    "static/js/3.a02ffda3.chunk.js": "/static/js/3.a02ffda3.chunk.js",
+    "static/js/3.a02ffda3.chunk.js.map": "/static/js/3.a02ffda3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.53598cca.chunk.css.map": "/static/css/2.53598cca.chunk.css.map",
+    "static/css/main.c438f4ed.chunk.css.map": "/static/css/main.c438f4ed.chunk.css.map",
+    "static/js/2.b8620a07.chunk.js.LICENSE.txt": "/static/js/2.b8620a07.chunk.js.LICENSE.txt",
+    "static/media/About.css": "/static/media/bubbles-mask.c5793634.gif",
+    "static/media/font-awesome.css": "/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/programmer.1bafc673.png": "/static/media/programmer.1bafc673.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.096c22aa.js",
+    "static/css/2.53598cca.chunk.css",
+    "static/js/2.b8620a07.chunk.js",
+    "static/css/main.c438f4ed.chunk.css",
+    "static/js/main.4607152f.chunk.js"
+  ]
+}
