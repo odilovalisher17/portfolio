@@ -1,0 +1,88 @@
+.port-header{
+    text-align: center;
+    font-size: 25px;
+}
+
+.port-main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Project */
+.project{
+    background: rgba(94, 14, 241);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    height: 95%;
+    margin: 2rem 0 !important;
+    display: grid;
+    text-align: center;
+}
+.project-header{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 7px 0;
+}
+.project-text{
+    width: 300px;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-btns{
+    align-self: flex-end;
+    margin-bottom: 5px
+}
+.project-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 19px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.project-btn:active{
+    transform: scale(1.01);
+}
+.project-btn a{
+    color: #fff;
+}
+.project-btn i{
+    color: white !important;
+    font-size: 20px !important;
+}
+
+.btn-demo{
+    background: #dc143c;
+}
+.btn-code{
+    background: black;
+}
+
+.project img{
+    width: 100%;
+}
+
+/*  */
+
+
+
+
+@media screen and (max-width:768px) {
+    .port-main{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .project{
+        height: auto !important;
+        margin: 0.5rem 0 !important;
+    }
+    .project-btn{
+        margin: 0 3px;
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+}
